@@ -1,6 +1,6 @@
 # Serialization and Deserialization
 
-## Setp 1 : implement the Serializable interface
+## Step 1 : implement the Serializable interface
 ```java
 import java.io.Serializable;
 
@@ -31,7 +31,7 @@ public class Person implements Serializable {
 }
 ```
 
-### Setp 2 : Write the Serializable object to a file
+### Step 2 : Serialize (write) the Serializable object to a file
 ```java
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -48,6 +48,26 @@ public class SerializeExample {
             System.out.println("Person object has been serialized to person.ser");
 
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+### Step 3 : Deserialize (read) the object from the file 
+```java
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.IOException;
+
+public class DeserializeExample {
+    public static void main(String[] args) {
+        try (FileInputStream fileIn = new FileInputStream("person.ser");
+             ObjectInputStream in = new ObjectInputStream(fileIn)) {
+
+            Person person = (Person) in.readObject();
+            System.out.println("Deserialized Person object: " + person);
+
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
