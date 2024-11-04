@@ -29,5 +29,27 @@ public class Person implements Serializable {
         return "Person{name='" + name + "', age=" + age + ", address='" + address + "'}";
     }
 }
+```
 
+### Setp 2 : Write the Serializable object to a file
+```java
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
+
+public class SerializeExample {
+    public static void main(String[] args) {
+        Person person = new Person("Alice", 30, "123 Main St, Wonderland");
+
+        try (FileOutputStream fileOut = new FileOutputStream("person.ser");
+             ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
+
+            out.writeObject(person);
+            System.out.println("Person object has been serialized to person.ser");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```
