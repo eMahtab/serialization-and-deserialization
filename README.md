@@ -1,4 +1,4 @@
-# Example 1 : Serialization and Deserialization
+# Example 1 : Serialization and Deserialization using Java API
 
 ## Step 1 : implement the Serializable interface
 ```java
