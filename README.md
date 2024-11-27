@@ -132,8 +132,10 @@ public class Jackson {
             String str = "{\"id\":\"1\",\"name\":\"Mahtab Alam\",\"age\":31}";
             System.out.println("STR :" + str);
             System.out.println(str.length());
+            System.out.println(jsonAsString.equals(str)); // true
 
-            System.out.println(jsonAsString.equals(str));
+            User obj = objectMapper.readValue(str, User.class);
+            System.out.println(obj);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -148,4 +150,5 @@ public class Jackson {
 STR :{"id":"1","name":"Mahtab Alam","age":31}
 40
 true
+name=Mahtab Alam, id=1, age=31
 ```
