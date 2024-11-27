@@ -139,5 +139,13 @@ public class Jackson {
         }
     }
 }
+```
 
+### Code Execution Output :
+```
+{"id":"1","name":"Mahtab Alam","age":31}
+40
+STR :{"id":"1","name":"Mahtab Alam","age":31}
+40
+true
 ```
