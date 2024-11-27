@@ -1,4 +1,4 @@
-# Serialization and Deserialization
+# Example 1 : Serialization and Deserialization
 
 ## Step 1 : implement the Serializable interface
 ```java
@@ -75,4 +75,4 @@ public class DeserializeExample {
 ```
 
 
-# Serialization and Deserialization using external libraries e.g. Jackson
+# Example 2 : Serialization and Deserialization using external libraries e.g. Jackson
