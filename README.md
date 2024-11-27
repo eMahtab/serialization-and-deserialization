@@ -153,7 +153,7 @@ true
 name=Mahtab Alam, id=1, age=31
 ```
 
-## Some notes regarding storing Java Object JSON in String
+## Some notes regarding storing Serialized Java object JSON as a String
 
 1. The backslash (\) is an escape character in Java.
 
