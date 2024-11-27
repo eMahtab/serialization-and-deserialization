@@ -76,6 +76,14 @@ public class DeserializeExample {
 
 
 # Example 2 : Serialization and Deserialization using external libraries e.g. Jackson
+```xml
+<dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.15.2</version>
+</dependency>
+```
+
 
 ```java
 // User.java
