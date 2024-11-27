@@ -73,3 +73,6 @@ public class DeserializeExample {
     }
 }
 ```
+
+
+# Serialization and Deserialization using external libraries e.g. Jackson
