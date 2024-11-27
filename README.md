@@ -76,3 +76,68 @@ public class DeserializeExample {
 
 
 # Example 2 : Serialization and Deserialization using external libraries e.g. Jackson
+
+```java
+// User.java
+public class User {
+    private String id;
+    private String name;
+    private int age;
+    // Constructors
+    public User() {
+    }
+    public User(String id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+    // Getters and Setters
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    @Override
+    public String toString() {
+        return "name=" + name + ", id=" + id + ", age=" + age;
+    }
+}
+
+// Jackson.java
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class Jackson {
+    public static void main(String[] args) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        User user = new User("1", "Mahtab Alam", 31);
+        try {
+            String jsonAsString = objectMapper.writeValueAsString(user);
+            System.out.println(jsonAsString);
+            System.out.println(jsonAsString.length());
+
+            String str = "{\"id\":\"1\",\"name\":\"Mahtab Alam\",\"age\":31}";
+            System.out.println("STR :" + str);
+            System.out.println(str.length());
+
+            System.out.println(jsonAsString.equals(str));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+```
