@@ -152,3 +152,11 @@ STR :{"id":"1","name":"Mahtab Alam","age":31}
 true
 name=Mahtab Alam, id=1, age=31
 ```
+
+## Some notes regarding storing Java Object JSON in String
+
+1. The backslash (\) is an escape character in Java.
+
+2. Placing a backslash before the double quote (\") tells the compiler that the double quote is part of the string, not the end of it.
+
+3. When backslash is just one, it does not count towards the String length, length() function
